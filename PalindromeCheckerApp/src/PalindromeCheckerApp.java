@@ -1,77 +1,66 @@
 /**
  * ============================================================
- * UC4 - Character Array Based Palindrome Check
+ * MAIN CLASS - UseCase5PalindromeCheckerApp
  * ============================================================
  *
- * Objective:
- * To check whether a given string is a palindrome by
- * converting it into a character array and comparing
- * characters using the two-pointer technique.
+ * Use Case 5: Stack Based Palindrome Checker
  *
- * A palindrome is a word that reads the same forward
- * and backward (example: "level", "madam").
+ * Description:
+ * This class validates a palindrome using a Stack
+ * data structure which follows the LIFO principle.
  *
- * Flow:
- * 1. Convert the string into a char[] array
- * 2. Initialize two pointers (start and end)
- * 3. Compare characters at both pointers
- * 4. Move pointers inward until they cross
- * 5. Display the result
+ * At this stage, the application:
+ * - Pushes characters into a stack
+ * - Pops them in reverse order
+ * - Compares with original sequence
+ * - Displays the result
  *
- * Data Structure Used:
- * char[]
+ * This maps stack behavior to reversal logic.
  *
- * Key Concepts:
- * - Character Array (char[])
- * - Array Indexing
- * - Two-Pointer Technique
- * - Conditional Statements
- * - Time Complexity Awareness (O(n))
- * - Console Output
- *
- * @author Prabhu.N
- * @version 4.0
+ * @author Prabhu
+ * @version 5.0
  */
+
+import java.util.Stack;
 
 public class PalindromeCheckerApp {
 
     /**
-     * Main method – Entry point of the Java application.
+     * Application entry point for UC5.
      *
      * @param args Command-line arguments
      */
     public static void main(String[] args) {
 
-        // Input string to be checked
-        String input = "level";
+        // Declare and initialize the input string
+        String input = "noon";
 
-        // Convert string to character array
-        char[] characters = input.toCharArray();
+        // Create a Stack to store characters
+        Stack<Character> stack = new Stack<>();
 
-        // Initialize two pointers
-        int start = 0;
-        int end = characters.length - 1;
+        // Push each character of the string into the stack
+        for (char c : input.toCharArray()) {
+            stack.push(c);
+        }
 
-        // Flag to track palindrome status
+        // Assume palindrome initially
         boolean isPalindrome = true;
 
-        // Two-pointer comparison loop
-        while (start < end) {
+        // Iterate again through original string
+        for (char c : input.toCharArray()) {
 
-            // Compare characters from both ends
-            if (characters[start] != characters[end]) {
+            // Pop character from stack
+            char poppedChar = stack.pop();
+
+            // Compare characters
+            if (c != poppedChar) {
                 isPalindrome = false;
-                break; // Exit loop on mismatch
+                break;
             }
-
-            start++; // Move start pointer forward
-            end--;   // Move end pointer backward
         }
 
         // Display result
-        System.out.println("Input text: " + input);
-        System.out.println("Is it a Palindrome? : " + isPalindrome);
-
-    } // End of main method
-
-} // End of class
+        System.out.println("Input : " + input);
+        System.out.println("Is Palindrome? : " + isPalindrome);
+    }
+}
