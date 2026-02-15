@@ -1,60 +1,54 @@
-# PalindromeCheckerAppManagementSystem
+# 🚀 Palindrome Checker App
 
-
-
-## 📌 Objective
-The objective of the **PalindromeChecker App** is to design and implement a
-**console-based Java application** that validates whether a given string is a
-palindrome under different conditions, while strengthening **core programming
-fundamentals** and **data structure concepts**.
-
-
-## 🚀 Use Case 3 (UC3): Palindrome Check Using String Reverse
-
-### 🎯 Goal
-Check whether a string is a palindrome by reversing it.
+The **Palindrome Checker App** is a console-based Java application designed to validate whether a given string is a palindrome using multiple approaches.  
+This project strengthens **core Java fundamentals**, **string handling**, and **data structure concepts** through progressive use cases.
 
 ---
 
-### 🔄 Flow
-1. Reverse the string using a loop.
-2. Compare the original string with the reversed string.
-3. Display the result.
-4. Program exits.
+## 🔹 UC4: Character Array Based Palindrome Check
+
+### 🎯 Objective
+To determine whether a given string is a palindrome by converting it into a **character array** and comparing characters efficiently using the **two-pointer technique**.
 
 ---
 
-## 🧠 Key Concepts Used in UC3
+### 🔄 Application Flow
 
-- **Loop (for loop)**  
-  Used to iterate through the characters of the string in reverse order
-  to construct the reversed string.
+1. Program starts
+2. Input string is converted into a `char[]`
+3. Two pointers are initialized (start & end)
+4. Characters at both ends are compared
+5. Pointers move inward after each comparison
+6. Result is displayed on the console
+7. Program exits
 
-- **String Immutability**  
-  In Java, `String` objects are immutable.  
-  Each modification creates a new `String` object in memory.
+---
 
-- **String Concatenation (+)**  
-  Used to build the reversed string character by character.  
-  This approach is intentionally used to demonstrate its drawbacks,
-  which will be improved in later use cases.
+### 🧠 Key Concepts Used
 
-- **equals() Method**  
-  Used to compare the actual content of two `String` objects rather than
-  memory references.
+- **Character Array (`char[]`)**  
+  A primitive array used to store individual characters of a string.
+
+- **Array Indexing**  
+  Accessing elements using index positions starting from `0`.
+
+- **Two-Pointer Technique**  
+  One pointer starts from the beginning and the other from the end, reducing unnecessary comparisons.
+
+- **Conditional Statements**  
+  Used to detect mismatched characters.
+
+- **Time Complexity Awareness**  
+  Optimized solution with **O(n)** time complexity and **O(1)** extra space.
 
 - **Console Output**  
-  `System.out.println()` is used to display the input and result.
+  `System.out.println()` is used to display the result.
 
 ---
 
-## 🧩 Data Structure Used
-- **String**
+### 🧩 Data Structure Used
+- `char[]`
 
 ---
-
-
-
-
 
 
