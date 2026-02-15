@@ -5,12 +5,12 @@ This project strengthens core Java fundamentals, string handling, and data struc
 
 ---
 
-## 🔹 UC6: Queue + Stack Based Palindrome Check
+## 🔹 UC7: Deque-Based Optimized Palindrome Check
 
 ### 🎯 Objective
 
-To determine whether a given string is a palindrome using both Queue (FIFO) and Stack (LIFO) data structures.
-This use case demonstrates the behavioral difference between FIFO and LIFO while validating palindrome logic.
+To determine whether a given string is a palindrome using a Deque (Double Ended Queue).
+This approach compares characters from both ends efficiently without reversing the string.
 
 ---
 
@@ -18,11 +18,11 @@ This use case demonstrates the behavioral difference between FIFO and LIFO while
 
 1. Program starts
 2. Input string is declared and initialized
-3. A Queue<Character> is created (FIFO)
-4. A Stack<Character> is created (LIFO)
-5. Each character is inserted into both queue and stack
-6. Characters are removed using dequeue (queue) and pop (stack)
-7. Dequeue and pop values are compared
+3. A Deque<Character> is created
+4. Each character is inserted into the deque
+5. First and last characters are removed
+6. Removed characters are compared
+7. Process continues until all characters are checked
 8. If all characters match, it is a palindrome
 9. Result is displayed on the console
 10. Program exits
@@ -31,26 +31,23 @@ This use case demonstrates the behavioral difference between FIFO and LIFO while
 
 ### 🧠 Key Concepts Used
 
-- Queue Data Structure  
-  Follows First In First Out (FIFO) principle.
+- Deque Data Structure  
+  A Double Ended Queue that allows insertion and deletion from both front and rear.
 
-- Stack Data Structure  
-  Follows Last In First Out (LIFO) principle.
+- addLast() Operation  
+  Inserts characters at the rear of the deque.
 
-- Enqueue Operation (queue.add())  
-  Inserts elements into the queue.
+- removeFirst() Operation  
+  Removes characters from the front of the deque.
 
-- Dequeue Operation (queue.remove())  
-  Removes elements from the front of the queue.
+- removeLast() Operation  
+  Removes characters from the rear of the deque.
 
-- Push Operation (stack.push())  
-  Inserts elements into the stack.
+- Bidirectional Comparison  
+  Enables direct comparison of first and last characters efficiently.
 
-- Pop Operation (stack.pop())  
-  Removes elements from the top of the stack.
-
-- Logical Comparison  
-  Matching dequeue (FIFO) output with pop (LIFO) output validates palindrome logic.
+- Optimized Approach  
+  Eliminates the need for separate reversal structures like Stack.
 
 - Time Complexity Awareness  
   Time Complexity: O(n)  
@@ -61,20 +58,19 @@ This use case demonstrates the behavioral difference between FIFO and LIFO while
 
 ---
 
-### 🧩 Data Structures Used
+### 🧩 Data Structure Used
 
-- Queue<Character>
-- Stack<Character>
+- Deque<Character>
 
 ---
 
 ### ▶️ Sample Input and Output
 
 Input:
-civic
+refer
 
 Output:
-Input : civic
+Input : refer
 Is Palindrome? : true
 
 ---
@@ -82,17 +78,17 @@ Is Palindrome? : true
 ### ⚙️ How to Compile and Run
 
 Compile:
-javac UseCase6PalindromeCheckerApp.java
+javac UseCase7PalindromeCheckerApp.java
 
 Run:
-java UseCase6PalindromeCheckerApp
+java UseCase7PalindromeCheckerApp
 
 ---
 
 ### 📚 Learning Outcome
 
-- Understanding FIFO vs LIFO behavior
-- Comparing Queue and Stack operations
-- Applying data structures to solve real problems
+- Understanding Deque and Double Ended Queue concept
+- Learning bidirectional traversal
+- Comparing front and rear elements efficiently
+- Writing optimized palindrome validation logic
 - Strengthening Java collections knowledge
-- Deepening understanding of palindrome validation logic
