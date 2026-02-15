@@ -1,92 +1,50 @@
-# 🚀 Palindrome Checker App
-
-The Palindrome Checker App is a console-based Java application designed to validate whether a given string is a palindrome using multiple approaches.
-This project strengthens core Java fundamentals, string handling, and data structure concepts through progressive use cases.
+# Palindrome Checker App
+## UC9: Recursive Palindrome Checker
 
 ---
 
-## 🔹 UC8: Linked List Based Palindrome Check
+## 📌 Objective
+The objective of the PalindromeChecker App is to design and implement a console-based Java application that validates whether a given string is a palindrome using recursion.
 
-### 🎯 Objective
-
-To determine whether a given string is a palindrome using a LinkedList data structure.
-This approach uses LinkedList’s ability to remove elements from both ends efficiently.
+This use case strengthens understanding of recursion and core data structure concepts.
 
 ---
 
-### 🔄 Application Flow
-
-1. Program starts
-2. Input string is declared and initialized
-3. A LinkedList<Character> is created
-4. Each character is added to the LinkedList
-5. First and last characters are removed
-6. Removed characters are compared
-7. Process continues until all characters are checked
-8. Result is displayed on the console
-9. Program exits
+## 🎯 Goal
+Check whether a string is a palindrome using recursion.
 
 ---
 
-### 🧠 Key Concepts Used
-
-- LinkedList Data Structure  
-  A dynamic structure that allows efficient insertion and deletion.
-
-- add() Operation  
-  Inserts characters into the LinkedList.
-
-- removeFirst() Operation  
-  Removes characters from the beginning.
-
-- removeLast() Operation  
-  Removes characters from the end.
-
-- Bidirectional Comparison  
-  Enables palindrome validation efficiently.
-
-- Optimized Logic  
-  No separate reversal needed.
-
-- Time Complexity Awareness  
-  Time Complexity: O(n)  
-  Space Complexity: O(n)
-
-- Console Output  
-  System.out.println() is used to display results.
+## 🔁 Flow
+1. Accept input string from user.
+2. Compare first and last characters.
+3. If equal → recursively check remaining substring.
+4. Base condition stops recursion when:
+  - All characters match, or
+  - A mismatch is found.
 
 ---
 
-### 🧩 Data Structure Used
+## 🧠 Key Concepts Used
 
-- LinkedList<Character>
+### 1️⃣ Recursion
+A technique where a method calls itself to solve smaller subproblems.
 
----
+### 2️⃣ Base Condition
+Prevents infinite recursion and terminates recursive calls.
 
-### ▶️ Sample Input and Output
-
-Input:
-level
-
-Output:
-Input : level
-Is Palindrome? : true
+### 3️⃣ Call Stack
+Memory structure used to manage method calls during recursion.
 
 ---
 
-### ⚙️ How to Compile and Run
+## 🗂 Data Structure Used
+**Call Stack**
 
-Compile:
-javac UseCase8PalindromeCheckerApp.java
-
-Run:
-java UseCase8PalindromeCheckerApp
+Each recursive call is stored in the call stack until the base condition is reached.
 
 ---
 
-### 📚 Learning Outcome
+## 🛠 How to Compile and Run
 
-- Understanding LinkedList structure
-- Learning double-ended operations
-- Efficient palindrome validation
-- Strengthening Java collections knowledge
+### Step 1: Compile
