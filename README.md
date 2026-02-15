@@ -5,11 +5,12 @@ This project strengthens core Java fundamentals, string handling, and data struc
 
 ---
 
-## 🔹 UC5: Stack-Based Palindrome Check
+## 🔹 UC6: Queue + Stack Based Palindrome Check
 
 ### 🎯 Objective
 
-To determine whether a given string is a palindrome using a Stack data structure, leveraging its Last In First Out (LIFO) principle to reverse the string and compare characters.
+To determine whether a given string is a palindrome using both Queue (FIFO) and Stack (LIFO) data structures.
+This use case demonstrates the behavioral difference between FIFO and LIFO while validating palindrome logic.
 
 ---
 
@@ -17,47 +18,52 @@ To determine whether a given string is a palindrome using a Stack data structure
 
 1. Program starts
 2. Input string is declared and initialized
-3. A Stack<Character> is created
-4. Each character of the string is pushed into the stack
-5. Characters are popped from the stack in reverse order
-6. Popped characters are compared with the original string
-7. If all characters match, it is a palindrome
-8. Result is displayed on the console
-9. Program exits
+3. A Queue<Character> is created (FIFO)
+4. A Stack<Character> is created (LIFO)
+5. Each character is inserted into both queue and stack
+6. Characters are removed using dequeue (queue) and pop (stack)
+7. Dequeue and pop values are compared
+8. If all characters match, it is a palindrome
+9. Result is displayed on the console
+10. Program exits
 
 ---
 
 ### 🧠 Key Concepts Used
 
+- Queue Data Structure  
+  Follows First In First Out (FIFO) principle.
+
 - Stack Data Structure  
-  A linear data structure that follows the Last In First Out (LIFO) principle.
+  Follows Last In First Out (LIFO) principle.
+
+- Enqueue Operation (queue.add())  
+  Inserts elements into the queue.
+
+- Dequeue Operation (queue.remove())  
+  Removes elements from the front of the queue.
 
 - Push Operation (stack.push())  
-  Inserts characters into the stack.
+  Inserts elements into the stack.
 
 - Pop Operation (stack.pop())  
-  Removes characters from the stack in reverse order.
+  Removes elements from the top of the stack.
 
-- String to Character Conversion  
-  Using toCharArray() to iterate through individual characters.
-
-- Palindrome Validation Logic  
-  Stack reversal naturally helps compare the original and reversed sequence.
-
-- Conditional Statements  
-  Used to detect mismatched characters.
+- Logical Comparison  
+  Matching dequeue (FIFO) output with pop (LIFO) output validates palindrome logic.
 
 - Time Complexity Awareness  
   Time Complexity: O(n)  
   Space Complexity: O(n)
 
 - Console Output  
-  System.out.println() is used to display the result.
+  System.out.println() is used to display results.
 
 ---
 
-### 🧩 Data Structure Used
+### 🧩 Data Structures Used
 
+- Queue<Character>
 - Stack<Character>
 
 ---
@@ -65,10 +71,10 @@ To determine whether a given string is a palindrome using a Stack data structure
 ### ▶️ Sample Input and Output
 
 Input:
-noon
+civic
 
 Output:
-Input : noon
+Input : civic
 Is Palindrome? : true
 
 ---
@@ -76,17 +82,17 @@ Is Palindrome? : true
 ### ⚙️ How to Compile and Run
 
 Compile:
-javac UseCase5PalindromeCheckerApp.java
+javac UseCase6PalindromeCheckerApp.java
 
 Run:
-java UseCase5PalindromeCheckerApp
+java UseCase6PalindromeCheckerApp
 
 ---
 
 ### 📚 Learning Outcome
 
-- Understanding Stack and LIFO principle
-- Applying push and pop operations
-- Using Stack for reversal logic
-- Strengthening Java fundamentals
-- Practical implementation of data structures
+- Understanding FIFO vs LIFO behavior
+- Comparing Queue and Stack operations
+- Applying data structures to solve real problems
+- Strengthening Java collections knowledge
+- Deepening understanding of palindrome validation logic
