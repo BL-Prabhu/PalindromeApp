@@ -5,12 +5,12 @@ This project strengthens core Java fundamentals, string handling, and data struc
 
 ---
 
-## 🔹 UC7: Deque-Based Optimized Palindrome Check
+## 🔹 UC8: Linked List Based Palindrome Check
 
 ### 🎯 Objective
 
-To determine whether a given string is a palindrome using a Deque (Double Ended Queue).
-This approach compares characters from both ends efficiently without reversing the string.
+To determine whether a given string is a palindrome using a LinkedList data structure.
+This approach uses LinkedList’s ability to remove elements from both ends efficiently.
 
 ---
 
@@ -18,36 +18,35 @@ This approach compares characters from both ends efficiently without reversing t
 
 1. Program starts
 2. Input string is declared and initialized
-3. A Deque<Character> is created
-4. Each character is inserted into the deque
+3. A LinkedList<Character> is created
+4. Each character is added to the LinkedList
 5. First and last characters are removed
 6. Removed characters are compared
 7. Process continues until all characters are checked
-8. If all characters match, it is a palindrome
-9. Result is displayed on the console
-10. Program exits
+8. Result is displayed on the console
+9. Program exits
 
 ---
 
 ### 🧠 Key Concepts Used
 
-- Deque Data Structure  
-  A Double Ended Queue that allows insertion and deletion from both front and rear.
+- LinkedList Data Structure  
+  A dynamic structure that allows efficient insertion and deletion.
 
-- addLast() Operation  
-  Inserts characters at the rear of the deque.
+- add() Operation  
+  Inserts characters into the LinkedList.
 
 - removeFirst() Operation  
-  Removes characters from the front of the deque.
+  Removes characters from the beginning.
 
 - removeLast() Operation  
-  Removes characters from the rear of the deque.
+  Removes characters from the end.
 
 - Bidirectional Comparison  
-  Enables direct comparison of first and last characters efficiently.
+  Enables palindrome validation efficiently.
 
-- Optimized Approach  
-  Eliminates the need for separate reversal structures like Stack.
+- Optimized Logic  
+  No separate reversal needed.
 
 - Time Complexity Awareness  
   Time Complexity: O(n)  
@@ -60,17 +59,17 @@ This approach compares characters from both ends efficiently without reversing t
 
 ### 🧩 Data Structure Used
 
-- Deque<Character>
+- LinkedList<Character>
 
 ---
 
 ### ▶️ Sample Input and Output
 
 Input:
-refer
+level
 
 Output:
-Input : refer
+Input : level
 Is Palindrome? : true
 
 ---
@@ -78,17 +77,16 @@ Is Palindrome? : true
 ### ⚙️ How to Compile and Run
 
 Compile:
-javac UseCase7PalindromeCheckerApp.java
+javac UseCase8PalindromeCheckerApp.java
 
 Run:
-java UseCase7PalindromeCheckerApp
+java UseCase8PalindromeCheckerApp
 
 ---
 
 ### 📚 Learning Outcome
 
-- Understanding Deque and Double Ended Queue concept
-- Learning bidirectional traversal
-- Comparing front and rear elements efficiently
-- Writing optimized palindrome validation logic
+- Understanding LinkedList structure
+- Learning double-ended operations
+- Efficient palindrome validation
 - Strengthening Java collections knowledge
